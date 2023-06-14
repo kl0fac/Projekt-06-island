@@ -333,17 +333,17 @@ h2::after {
 
 /* pro PC*/
 @media (min-width: 1001px) {
-
+  
     .perex{
-        padding-left: 25%;
-        padding-right:25%;
+        padding-left:30%;
+        padding-right:30%;
     }
 
     .autor{
-        margin-top: -90px;
+        margin-top: -7%;
     }
     .autor::before {
-        top:100px;
+        top:40%;
         
     }
 
@@ -351,7 +351,7 @@ h2::after {
         width:960px;
         background-color: white;
         margin:auto;
-        margin-top:-90px;
+        margin-top:-180px;
     }
 
     .menu{
@@ -373,8 +373,9 @@ h2::after {
     }
     .uvod .popisek-text{
         position: absolute;
-        left:40%;
-        margin-top:-40px;  
+        margin-top:-40px; 
+        margin-left: -850px;
+        color:white;
     }
    /*texty*/
    .proc p{
@@ -401,7 +402,7 @@ h2::after {
    .text .popisek-text{
     
         position: absolute;
-        left:65%;
+        right: 35%;
         margin-top:-40px;
    }
 
