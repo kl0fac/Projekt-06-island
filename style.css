@@ -7,37 +7,465 @@
  Jedeme retro cernobile, dnes barvy nepotrebujeme.
 */
 
+/* pro mobil */
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: white;
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6;
+    
+    
 }
+
 
 
 /* HLAVICKA */
+.hlavicka{
+    width:100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.363)),
+                       url(images/island-hlavicka.jpg);
 
-.titulek {
-    font-family: 'Raleway', serif;
+    background-size:cover;    
 }
 
 
-/* MENU */
+.titulek  {
+    font-family: 'Raleway', serif;
+    color:white;
+    text-align:center;
+    font-size: 100px;
+    margin:auto auto;
+    
+}
 
+.perex{
+    display:block;
+    color:white;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-weight: 600;    
+}
+  
+.autor{
+    text-align:center;
+    color: rgba(255, 255, 255, 0.822);
+    font-style: italic;
+    padding:10%;
+    position:relative;
+   
+}
+
+.autor::before {
+	content: "";
+    display: block;
+    width: 90px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.822);;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);;
+    top:20px;
+	
+}
+
+
+
+/* MENU */
+.menu{
+    display:flex;
+    flex-direction: column;
+    padding:0;
+    padding-top: 20px;;
+    padding-bottom: 20px;
+
+    
+}
+
+.menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: gray;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.uvodmenu, .procmenu, .comenu, .galeriemenu{
+    display:block;
+    margin:auto;
+    border-bottom: 1px solid lightgrey;
+    width:100%;
+    text-align: center;
+    
+    
+}
 
 
 
 /* OBSAH */
 
+h2{
+    position: relative;
+    margin-bottom: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
 
+h2::after {
+	content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    background-color: lightskyblue;
+    position: absolute;
+    left: 0;
+    bottom: -35px;
+    
+}
 
+.text h2, .text p{
+    padding-left:18px;
+    padding-right: 18px;
+}
+    
+.text img{
+    width: 100%;
+}
 
+.popisek-text {
+    display:block;
+    text-align: center;
+    margin:auto;
+    color:gray;   
+    font-family:Arial, Helvetica, sans-serif ;
+}
+.popisek-text a{
+    color: gray;
+}
 /* FOTOGALERIE */
 
+ h2{
+    padding-left:18px;
+    padding-right: 18px;
+}
+   
+.foto img{
+    width:100%;
+}
+.popisek{
+    display:block;
+    text-align:center;
+    margin:auto;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+}
+
+
+.popisek-copy{
+    display:block;
+    text-align: center;
+    padding-bottom: 20px;
+    margin:auto;
+    color:gray;   
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:100;
+}
+.popisek-copy a{
+    color:gray;
+    font-weight:100;
+}
+
+.galerie{
+    
+}
 
 
 
 /* PATICKA */
+
+.paticka{
+    display:block;
+    width:100%;
+    margin:auto;
+    padding:18px;
+    color:grey; 
+     
+    
+}
+
+.paticka a{
+    color:grey
+}
+
+.stranka{
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.616);
+
+}
+
+
+/* pro TABLET */
+@media (min-width: 501px) and (max-width: 1000px){
+    /*hlavicka*/
+    .stranka{
+        margin-top:-15px;
+    }
+    .perex{
+        padding-left: 5%;
+        padding-right:5%;
+    }
+
+    /*menu*/
+
+    .menu{
+        flex-direction: row;
+        padding-left:5%;
+        padding-right:5%;
+        font-size: 14px;
+    }
+    .uvodmenu{
+        border-width: 1px 1px 1px 0;
+        border-style:solid;
+        border-color: lightgrey;
+        display:block;
+        padding:5px;
+    }
+    
+    .procmenu{
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: lightgrey;
+    display:block;
+    padding:5px;
+    }
+    
+    .comenu{
+        border-width:1px 0 1px 0;
+        border-style: solid;
+        border-color: lightgray;
+        display:block;
+        padding:5px;
+    }
+
+    .galeriemenu{
+        border-width: 1px 0 1px 1px;
+        border-style: solid;
+        border-color: lightgrey;
+        display:block;
+        padding:5px;
+    }
+
+    /*text*/
+    
+
+    .popisek-text{
+        display:block;
+        color:white;
+        margin-left: 60%;
+        margin-top:-50px; 
+        white-space: nowrap;
+        padding-bottom:50px;
+    }
+
+    .popisek-text a{
+        color:white;
+    }
+    
+    .text img{
+        padding-top: 20px;
+        
+    }
+
+    .co{
+        padding-bottom: 30px;
+    }
+    
+
+    /*fotogalerie*/
+
+    .galerie{
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    
+    .foto{
+        position:relative;
+        overflow:hidden;
+        width:50%;
+        height: auto;
+    }
+    
+    .foto img{
+        width:100%;
+        display:block;
+        transition: transform 0.3s; 
+        padding-top: 0;
+        
+    }
+    
+    
+    .popisek{
+        position:absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        color:white;
+        transition: transform 0.3s;
+    }
+    
+    .foto:active .popisek{
+        transform: translateY(-100%);
+    }
+    
+    .foto:active img{
+        transform: scale(1.2);
+    }
+
+    
+    
+
+    
+}
+
+/* pro PC*/
+@media (min-width: 1001px) {
+
+    .perex{
+        padding-left: 25%;
+        padding-right:25%;
+    }
+
+    .autor{
+        margin-top: -90px;
+    }
+    .autor::before {
+        top:100px;
+        
+    }
+
+    .stranka{
+        width:960px;
+        background-color: white;
+        margin:auto;
+        margin-top:-90px;
+    }
+
+    .menu{
+        width:25%;
+        padding-left:50px;
+    }
+    .uvod p{
+    padding-right:50px;
+    padding-left:30%;
+    }
+
+    .uvod{
+        margin-top: -135px;
+    }
+
+    .uvod img{
+        position:relative;
+        padding-top: 40px;
+    }
+    .uvod .popisek-text{
+        position: absolute;
+        left:40%;
+        margin-top:-40px;  
+    }
+   /*texty*/
+   .proc p{
+    padding-left:50px;
+    padding-right: 50px;
+   }
+
+   .proc img{
+    padding-top:40px;
+   }
+
+   .co {
+    padding-left: 260px;
+    padding-right:50px;
+
+   }
+   .co img{
+    width:960px;
+    margin-left:-260px;
+    padding-top:40px;
+    
+   }
+
+   .text .popisek-text{
+    
+        position: absolute;
+        left:65%;
+        margin-top:-40px;
+   }
+
+   .popisek-text{
+    color:white;
+   }
+   .popisek-text a{
+    color:white;
+   }
+
+    /*galerie*/
+
+    .galerie{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between
+        
+        
+    }
+
+    .foto{
+        position:relative;
+        overflow:hidden;
+        width: 33.333%;
+        margin:auto;
+        padding:0;
+        
+       
+    }
+    
+    .foto img{
+        width:100%;
+        display:block;
+        transition: transform 0.3s; 
+        
+        
+    }
+    
+    
+    .popisek{
+        position:absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        color:white;
+        transition: transform 0.3s;
+    }
+    
+    .foto:hover .popisek{
+        transform: translateY(-100%);
+    }
+    
+    .foto:hover img{
+        transform: scale(1.2);
+    }
+
+
+    /*paticka*/
+    .paticka{
+        width:960px;
+        margin:auto;
+        padding-top: 50px;
+        padding-left:0;
+    }
+}
